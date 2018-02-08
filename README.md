@@ -1,10 +1,21 @@
 # HASS-rest-camera
-Custom component for a camera which displays images served by a REST API
+Custom component for a camera which displays images served by a REST API.
 
-Config:
+For example, home-assistant serves the images captured by connected cameras [via its REST API](https://home-assistant.io/developers/rest_api/#get-apicamera_proxycameraltentity_id). Thus component allows you to display those images on a second home-assistant instance. Note that this can be achieved in a number of ways, for example [using the www folder](https://home-assistant.io/components/camera.generic/#local-image-with-hassio), but I felt that using the REST API required the least configuration effort. Furthermore this component should be extendible to work with other image API's.
+
+Place the custom_components folder [in your configuration directory](https://home-assistant.io/developers/platform_example_sensor/) (or add its contents to an existing custom_components folder). Add to your home-assistant config:
+
 ```yaml
 camera:
   - platform: rest
     resource: http://192.168.0.28:8123/api/camera_proxy/camera.last_captured_motion
     name: bird-cam
+  - platform: rest
+    resource: http://192.168.0.28:8123/api/camera_proxy/camera.live_view
+
 ```
+
+Configuration variables:
+
+- **resource** (*Required*): The resource or endpoint that serves the image.
+- **name** (*Optional*): The name to display.
