@@ -19,3 +19,7 @@ Configuration variables:
 
 - **resource** (*Required*): The resource or endpoint that serves the image.
 - **name** (*Optional*): The name to display.
+
+<p align="center">
+<img src="https://github.com/robmarkcole/HASS-rest-camera/blob/master/images/HA_view.png" width="500">
+</p>
