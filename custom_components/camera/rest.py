@@ -45,7 +45,7 @@ class RestCamera(Camera):
 
     def camera_image(self):
         """Return a still image response."""
-        image_name = 'REST.jpg'
+        image_name = '{}.jpg'.format(self._name)
         response = requests.get(self._resource, stream=True)
         with open(image_name, 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)  # Save the image.
