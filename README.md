@@ -23,3 +23,5 @@ Configuration variables:
 <p align="center">
 <img src="https://github.com/robmarkcole/HASS-rest-camera/blob/master/images/HA_view.png" width="500">
 </p>
+
+Here last_captured_motion is displaying the last image captured using the [motion hassio add-on](https://github.com/HerrHofrat/hassio-addons/tree/master/motion), whilst live_view is the live view from the camera. This is a project to count the number and species of bird visiting my bird-feeder. A longer write up is [here](https://github.com/robmarkcole/robins-hassio-config).
